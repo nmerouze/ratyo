@@ -12,13 +12,13 @@ const mediaQueries = {
   large: em(50),
 };
 
-const htmlSizes = {
+const baseSizes = {
   base: 1,
   small: 1.125,
   large: 1.25,
 };
 
-console.log(fontSizes(mediaQueries, htmlSizes));
+console.log(fontSizes(mediaQueries, baseSizes));
 
 console.log(ms(1));
 console.log(vr(1));

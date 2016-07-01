@@ -90,24 +90,20 @@ It will generate the following object.
 ```js
 {
   base: {
-    fontSize: '100%'
+    fontSize: '100%',
   },
   small: {
-    fontSize: '112.5%'
+    fontSize: '112.5%',
   },
   large: {
-    fontSize: '125%'
+    fontSize: '125%',
   },
   mediaQueries: {
     'all and (min-width: 25em)': {
-      html: {
-        fontSize: '112.5%'
-      },
+      fontSize: '112.5%',
     },
     'all and (min-width: 50em)': {
-      html: {
-        fontSize: '125%'
-      },
+      fontSize: '125%',
     },
   },
 }
