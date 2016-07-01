@@ -53,11 +53,11 @@ export const myStyle = {
 ### Vertical Rhythm
 
 ```js
-import { verticalRhythm, rem } from 'ratyo';
+import { verticalRhythm } from 'ratyo';
 
 const baseLine = 1.5;
 
-const vr = (value) => rem(verticalRhythm(value, baseLine));
+const vr = (value) => verticalRhythm(value, baseLine);
 
 export const myStyle = {
   margin: vr(1.5), // 1.5 baselines == 2.25rem
