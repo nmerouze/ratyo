@@ -11,7 +11,7 @@ export const verticalRhythm = (size, baseline) => rem(size * baseline);
 const query = (type, size) => `${type} and (min-width: ${size})`;
 export const media = (size) => `@media all and (min-width: ${size})`;
 
-export const fontSizes = (sizes, mediaQueries) => {
+export const fontSizes = (mediaQueries, sizes) => {
   const rules = {
     base: {
       fontSize: pct(sizes.base * 100)
@@ -25,7 +25,7 @@ export const fontSizes = (sizes, mediaQueries) => {
       fontSize: pct(sizes[name] * 100),
     };
 
-    rules.mediaQueries[query('all', sizes[name])] = rules[name];
+    rules.mediaQueries[query('all', mediaQueries[name])] = rules[name];
   });
 
   return rules;
