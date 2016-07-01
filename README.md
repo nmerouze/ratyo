@@ -79,9 +79,9 @@ const mediaQueries = {
 };
 
 export const rules = fontSizes('html', mediaQueries, {
-  base: ms(0),
-  small: ms(0.245),
-  large: ms(0.464),
+  base,
+  small: 1.125,
+  large: 1.25,
 });
 ```
 
