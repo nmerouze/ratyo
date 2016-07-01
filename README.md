@@ -78,28 +78,36 @@ const mediaQueries = {
   large: em(50),
 };
 
-export const rules = fontSizes('html', mediaQueries, {
+export const rules = fontSizes(mediaQueries, {
   base,
   small: 1.125,
   large: 1.25,
 });
 ```
 
-It will generate the following rules.
+It will generate the following object.
 
 ```js
 {
-  html: {
+  base: {
     fontSize: '100%'
   },
-  '@media all and (min-width: 25em)': {
-    html: {
-      fontSize: '112.5%'
-    },
+  small: {
+    fontSize: '112.5%'
   },
-  '@media all and (min-width: 50em)': {
-    html: {
-      fontSize: '125%'
+  large: {
+    fontSize: '125%'
+  },
+  mediaQueries: {
+    'all and (min-width: 25em)': {
+      html: {
+        fontSize: '112.5%'
+      },
+    },
+    'all and (min-width: 50em)': {
+      html: {
+        fontSize: '125%'
+      },
     },
   },
 }
