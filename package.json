@@ -1,0 +1,27 @@
+{
+  "name": "ratyo",
+  "version": "0.1.0",
+  "description": "Typography and media query utilities for Radium",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "examples": "./node_modules/.bin/babel-node examples/index.js",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Merouze",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nmerouze/ratyo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nmerouze/ratyo/issues"
+  },
+  "homepage": "https://github.com/nmerouze/ratyo",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0"
+  }
+}
