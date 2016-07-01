@@ -13,16 +13,12 @@ const mediaQueries = {
 };
 
 const htmlSizes = {
-  base: ms(0),
-  small: ms(0.245),
-  large: ms(0.464),
+  base: 1,
+  small: 1.125,
+  large: 1.25,
 };
 
-const rules = {
-  ...fontSizes('html', mediaQueries, htmlSizes)
-};
-
-console.log(rules);
+console.log(fontSizes(mediaQueries, htmlSizes));
 
 console.log(ms(1));
 console.log(vr(1));
