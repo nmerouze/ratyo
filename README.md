@@ -43,7 +43,7 @@ import { modularScale, em } from 'ratyo';
 const base = 1;
 const ratio = 1.618; // golden ratio
 
-const ms = (value) => em(moduleScale(value, base, ratio));
+const ms = (value) => em(modularScale(value, base, ratio));
 
 export const myStyle = {
   fontSize: ms(1), // 1.618em
@@ -55,9 +55,9 @@ export const myStyle = {
 ```js
 import { verticalRhythm } from 'ratyo';
 
-const baseLine = 1.5;
+const baseline = 1.5;
 
-const vr = (value) => verticalRhythm(value, baseLine);
+const vr = (value) => verticalRhythm(value, baseline);
 
 export const myStyle = {
   margin: vr(1.5), // 1.5 baselines == 2.25rem
@@ -99,10 +99,10 @@ It will generate the following object.
     fontSize: '125%',
   },
   mediaQueries: {
-    'all and (min-width: 25em)': {
+    '(min-width: 25em)': {
       fontSize: '112.5%',
     },
-    'all and (min-width: 50em)': {
+    '(min-width: 50em)': {
       fontSize: '125%',
     },
   },
