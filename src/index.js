@@ -8,8 +8,8 @@ export const modularScale = (value, base, ratio) =>
 
 export const verticalRhythm = (size, baseline) => rem(size * baseline);
 
-const query = (type, size) => `${type} and (min-width: ${size})`;
-export const media = (size) => `@media all and (min-width: ${size})`;
+const query = (size) => `(min-width: ${size})`;
+export const media = (size) => `@media ${query(size)}`;
 
 export const fontSizes = (mediaQueries, sizes) => {
   const rules = {
@@ -25,7 +25,7 @@ export const fontSizes = (mediaQueries, sizes) => {
       fontSize: pct(sizes[name] * 100),
     };
 
-    rules.mediaQueries[query('all', mediaQueries[name])] = rules[name];
+    rules.mediaQueries[query(mediaQueries[name])] = rules[name];
   });
 
   return rules;
